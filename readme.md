@@ -2,9 +2,7 @@ Projet importé, datant d'avril 2023
 ---
 Petit jeu créé en un mois, 100% en javascript afin de découvrir le language.
 
-Par :
-  -- Fabien ARTHUR
-  -- Alexandre JIN
+Par : Fabien ARTHUR & Alexandre JIN
 
 
 Contrôles ;
