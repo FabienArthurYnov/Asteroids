@@ -1,0 +1,19 @@
+[
+    {
+        "rotationSpeed": 0.05,  
+    "mainThrusterForce" : 0.16,
+    "sideThrusterForce" : 0.05,
+    "reverseThrusterForce" : 0.08,
+    "weight": 1,
+    "brakeForce" : 0.01
+    },
+
+    {
+        "rotationSpeed": 0.02,  
+    "mainThrusterForce" : 0.16,
+    "sideThrusterForce" : 0.03,
+    "reverseThrusterForce" : 0.08,
+    "weight": 2,
+    "brakeForce" : 0.01
+    }
+]

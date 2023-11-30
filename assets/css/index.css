@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.banner {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2px;
+    overflow: hidden;
+}
+
+h1 {
+    color: white;
+}
+
+button {
+    background-color: black;
+    border: transparent;
+    cursor: pointer;
+    width: 90px;
+    height: 40px;
+    transition: 1s;
+}
+
+button:hover {
+    background-color: white;
+    transition: 1s;
+}
+
+.container_button:hover a {
+    color: black;
+    transition: 1s;
+}
+
+.container {
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(black, white, black);
+    animation: animate 5s linear infinite;
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(black, wheat, black);
+    animation: animateReverse 10s linear infinite;
+}
+
+@keyframes animate {
+
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+@keyframes buttonAnimate {
+
+    0% {
+        background-color: black;
+    }
+
+    100% {
+        background-color: white;
+    }
+}
+
+@keyframes animateReverse {
+
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.banner span {
+    width: calc(6.25vw - 2px);
+    height: calc(6.25vw - 2px);
+    background: #181818;
+    transition: 1s;
+    z-index: 2;
+}
+
+.banner span:hover {
+    background: white;
+    transition: 0s;
+}

@@ -1,0 +1,298 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-size: cover;
+    overflow: hidden;
+
+}
+
+#fighterImg {
+    width: 70px;
+    height: 70px;
+}
+
+#fighter {
+    position: absolute;
+    top: 1500px;
+    left: 1500px;
+    transform: translate(-50%, -50%) rotate(90deg);
+    z-index: 1;
+    width: 70px;
+    height: 70px;
+}
+
+#debug {
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    z-index: 2;
+
+    margin: 20px;
+    color: rgb(70, 211, 70);
+}
+
+#gamePaused {
+
+    transform: translate(-50%);
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    z-index: 999;
+}
+
+#game {
+    display: none;
+}
+
+
+#choice {
+    background: url("../images/looping-background.webp");
+}
+
+.container_choice {
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container_choice h1 {
+    color: white;
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+    margin-bottom: 1rem;
+}
+
+
+.container_image {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.image-container {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin-top: 1rem;
+    transition: 1s;
+}
+
+img {
+    border-radius: 5px;
+}
+
+h2 {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    z-index: 1;
+    opacity: 0;
+    transition: 1s;
+}
+
+.image-container:hover {
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.9);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.9);
+    transition: 1s;
+}
+
+.image-container:hover h2 {
+    opacity: 1;
+    transition: 1s;
+}
+
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border: transparent;
+    cursor: pointer;
+    width: 90px;
+    height: 40px;
+    transition: 1s;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    transition: 1s;
+}
+
+.hud {
+    position: absolute;
+}
+
+.background-canvas {
+    overflow: hidden;
+}
+
+#backgroundMapImage {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    background: url("../images/looping-background.webp") repeat;
+    width: 3000px;
+    height: 3000px;
+    border: 10px solid rgba(255, 0, 0, 0.321);
+}
+
+#outmapBottom {
+    position: absolute;
+    top: 3000px;
+    width: 3000px;
+    height: 3000px;
+    background: url("../images/looping-background.webp") repeat;
+    border: 1000px solid rgba(255, 0, 0, 0.321);
+}
+
+#outmapRight {
+    position: absolute;
+    left: 3000px;
+    width: 3000px;
+    height: 3000px;
+    background: url("../images/looping-background.webp") repeat;
+    border: 1000px solid rgba(255, 0, 0, 0.321);
+}
+
+#greenArrow {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    transform: translate(-150%, -50%);
+}
+
+#scoreCount {
+    position: fixed;
+    left: 45%;
+    top: 5%;
+    color: white;
+    font-size: 40px;
+    z-index: 10;
+}
+
+#life_info {
+    left: 80%;
+    top: 5%;
+    position: fixed;
+    color: white;
+    font-size: 40px;
+    z-index: 10;
+}
+
+#lifeBarBackground {
+    width: 400px;
+    height: 30px;
+    background: black;
+    border: 5px solid lightslategrey;
+    transform: translate(-50%, 0)
+}
+
+#lifeBarLive {
+    background: rgb(165, 11, 11);
+    width: 400px;
+    height: 30px;
+    z-index: 1;
+}
+
+#hurtScreen {
+    background-color: rgba(165, 11, 11, 0);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* thusters */
+#mainThruster {
+    visibility: hidden;
+    position: relative;
+    width: 50px;
+    height: 60px;
+    transform: rotate(-85deg);
+    top: -15px;
+    left: 7px;
+}
+
+#reverseThruster {
+    visibility: hidden;
+    position: relative;
+    width: 30px;
+    height: 45px;
+    transform: rotate(90deg);
+    top: -130px;
+    left: 30px;
+}
+
+#reverseThrusterLeft {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    top: 0px;
+    left: 0px;
+
+}
+
+#reverseThrusterRight {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    top: 0px;
+    left: 0px;
+}
+
+#leftThruster {
+    visibility: hidden;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    transform: rotate(10deg);
+    top: -190px;
+    left: 0px;
+}
+
+#rightThruster {
+    visibility: hidden;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    transform: rotate(185deg);
+    top: -185px;
+    left: 05px;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

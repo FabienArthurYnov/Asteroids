@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet JS Paris</title>
+    <link rel="stylesheet" href="./assets/css/game.css">
+    <script src="./code/main.js" type="module"></script>
+</head>
+
+<body id="body">
+
+    <div id="game">
+        <div class="hud">
+            <div id="debug">
+                <span id="fpsCounter">0fps</span>
+                <span id="posCounter">x, y: 0, 0</span>
+                <span id="speedCounter">speed: 0 = 0 + 0</span>
+                <span id="rotationCounter">rotation: 0</span>
+            </div>
+        </div>
+        <div id="hurtScreen"></div>
+
+        <div id="scoreCount">
+            Score : 0
+        </div>
+        <div id="life_info">
+            <div id="lifeBarBackground">
+                <div id="lifeBarLive"></div>
+            </div>
+        </div>
+
+
+        <div id="projectileLayer">
+            <img id="greenArrow" src="./assets/images/greenArrow.webp">
+            <div id="fighter">
+                <img id="fighterImg" src="./assets/images/fighter-01.webp">
+                <img id="mainThruster" src="./assets/images/Laser_blue.webp">
+                <div id="reverseThruster">
+                    <img id="reverseThrusterLeft" src="./assets/images/Laser_blue.webp">
+                    <img id="reverseThrusterRight" src="./assets/images/Laser_blue.webp">
+                </div>
+                <img id="leftThruster" src="./assets/images/Laser_blue.webp">
+                <img id="rightThruster" src="./assets/images/Laser_blue.webp">
+            </div>
+        </div>
+
+        <div id="explosionFighter">
+        </div>
+
+        <div class="background-canvas">
+            <div id="backgroundMapImage"></div>
+        </div>
+        <div id="asteroidsLayer">
+        </div>
+        <div id="greenCoinLayer">
+        </div>
+        <div id="outmapBottom" src="./assets/images/looping-background.webp"></div>
+        <div id="outmapRight" src="./assets/images/looping-background.webp"></div>
+
+    </div>
+
+    <div id="gamePaused">
+        <button id="unpaused">Resume</button>
+        <a href="./index.html"><button id="quit">Quit the Game</button></a>
+    </div>
+
+    <div id="choice">
+        <div class="container_choice">
+
+            <h1>Choose your SpaceShip</h1>
+
+            <div class="container_image">
+            <div class="image-container">
+                <img id="first" src="./assets/images/thunder.jpg" alt="image description">
+                <h2>Fast</h2>
+            </div>
+
+            <div class="image-container">
+                <img id="second" src="./assets/images/slow.jpg" alt="image description">
+                <h2>Slow</h2>
+            </div>
+        </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
